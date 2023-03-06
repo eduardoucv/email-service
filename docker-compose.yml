@@ -1,0 +1,11 @@
+services:
+    api:
+        build: .
+        container_name: email-service
+        ports:
+            - "3002:3002"
+        networks:
+            - subscription_system
+networks:
+    subscription_system:
+        name: subscription_system
